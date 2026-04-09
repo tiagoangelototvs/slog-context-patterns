@@ -34,7 +34,9 @@ func main() {
 }
 
 func process(ctx context.Context) {
-	slog.InfoContext(ctx, "starting process")
+	slog.InfoContext(ctx, "starting process",
+		slog.String("operation", "process"),
+	)
 
 	step(ctx)
 }
